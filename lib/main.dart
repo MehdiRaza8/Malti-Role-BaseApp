@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sharedprefrence/home.dart';
+import 'package:sharedprefrence/screenfour.dart';
+import 'package:sharedprefrence/screenthree.dart';
 import 'package:sharedprefrence/splash.dart';
 
 void main() {
@@ -10,8 +13,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SplashScreen(),
+    return MaterialApp(
+      initialRoute: ScreenOne.id,
+      routes: {
+        ScreenOne.id: (context) => ScreenOne(),
+        ScreenTwo.id: (context) => ScreenTwo(),
+        ScreenThree.id: (context) => ScreenThree(),
+        ScreenFour.id: (context) => ScreenFour()
+      },
     );
   }
 }
