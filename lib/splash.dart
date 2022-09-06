@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sharedprefrence/home.dart';
+import 'package:sharedprefrence/utils/routs_name.dart';
 
 class ScreenOne extends StatelessWidget {
-  static const String id = 'ScreenOne';
-
   const ScreenOne({
     Key? key,
   }) : super(key: key);
@@ -24,8 +23,8 @@ class ScreenOne extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, ScreenTwo.id);
-                  // Navigator.push(context,
+                  Navigator.pushNamed(context, RouteName.ScreenTwo);
+                  // // Navigator.push(context,
                   //     MaterialPageRoute(builder: (context) => ScreenTwo()));
                 },
                 child: Container(

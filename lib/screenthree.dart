@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:sharedprefrence/screenfour.dart';
+import 'package:sharedprefrence/utils/routs_name.dart';
 
 class ScreenThree extends StatelessWidget {
-  static const String id = 'ScreenThree';
   const ScreenThree({Key? key}) : super(key: key);
 
   @override
@@ -23,7 +23,11 @@ class ScreenThree extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, ScreenFour.id);
+                  Navigator.pushNamed(context, RouteName.ScreenThree,
+                      arguments: {
+                        'Node': 'Mehdi',
+                        'Name': 'Flutter',
+                      });
                 },
                 child: Container(
                   height: 50,

@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:sharedprefrence/screenthree.dart';
+import 'package:sharedprefrence/utils/routs_name.dart';
 
 class ScreenTwo extends StatelessWidget {
-  static const String id = 'ScreeTwo';
-  const ScreenTwo({Key? key}) : super(key: key);
+  dynamic data;
+
+  ScreenTwo({Key? key, required this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Screen 2'),
+        title: Text(''),
         centerTitle: true,
       ),
       body: Center(
@@ -23,7 +25,8 @@ class ScreenTwo extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, ScreenThree.id);
+                  Navigator.pushNamed(context, RouteName.ScreenThree,
+                  );
                 },
                 child: Container(
                   height: 50,

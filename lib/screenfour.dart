@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ScreenFour extends StatelessWidget {
-  static const String id = 'Screenfour';
+
   const ScreenFour({Key? key}) : super(key: key);
 
   @override

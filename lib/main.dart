@@ -3,6 +3,8 @@ import 'package:sharedprefrence/home.dart';
 import 'package:sharedprefrence/screenfour.dart';
 import 'package:sharedprefrence/screenthree.dart';
 import 'package:sharedprefrence/splash.dart';
+import 'package:sharedprefrence/utils/routs.dart';
+import 'package:sharedprefrence/utils/routs_name.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,13 +16,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: ScreenOne.id,
-      routes: {
-        ScreenOne.id: (context) => ScreenOne(),
-        ScreenTwo.id: (context) => ScreenTwo(),
-        ScreenThree.id: (context) => ScreenThree(),
-        ScreenFour.id: (context) => ScreenFour()
-      },
+      initialRoute: RouteName.ScreenOne,
+      onGenerateRoute: Routes.generateRoute
     );
   }
 }
